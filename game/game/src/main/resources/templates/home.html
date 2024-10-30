@@ -4,48 +4,90 @@
     <title>Rock Paper Scissors</title>
     <style>
         body {
-            background-color: #007BFF; /* Blue background */
-            color: white; /* White text color for contrast */
-            font-family: 'Arial', sans-serif; /* Font style */
-            text-align: center; /* Center text */
-            padding: 50px; /* Padding around the content */
+            background-color: #007BFF;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
         }
 
         h1 {
-            font-size: 2.5em; /* Larger font size for the heading */
-            margin-bottom: 30px; /* Space below the heading */
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
 
         a {
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         button {
-            background-color: #FFD700; /* Yellow shade for buttons */
-            color: black; /* Black text color for buttons */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            padding: 15px 30px; /* Padding inside buttons */
-            font-size: 1.2em; /* Button text size */
-            cursor: pointer; /* Pointer cursor on hover */
-            margin: 10px; /* Space between buttons */
-            transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+            max-width: 250px;
         }
 
         button:hover {
-            background-color: #FFC107; /* Slightly darker yellow on hover */
-            transform: scale(1.05); /* Slightly enlarge button on hover */
+            background-color: #FFC107;
+            transform: scale(1.05);
         }
 
         button:active {
-            transform: scale(0.95); /* Slightly shrink button on click */
+            transform: scale(0.95);
+        }
+
+        /* Layout for screens where width > height */
+        @media (orientation: portrait) {
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically */
+            }
+            button {
+                width: 80vw;
+            }
+        }
+
+        /* Layout for screens where height >= width */
+        @media (orientation: landscape) {
+            .button-container {
+                flex-direction: row; /* Display buttons side by side */
+            }
+            button {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+        }
+
+        /* Additional styling for smaller screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            button {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Welcome to Rock Paper Scissors</h1>
-    <a href="/enterUsername"><button>Play Game</button></a>
-    <a href="/highscore"><button>Check High Score</button></a>
-    <a href="/rules"><button>Read Rules</button></a>
+    <div class="button-container">
+        <a href="/enterUsername"><button>Play Game</button></a>
+        <a href="/highscore"><button>Check High Score</button></a>
+        <a href="/rules"><button>Read Rules</button></a>
+    </div>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: #007BFF; /* Blue background */
+            background-color: #007BFF;
             color: white;
             font-family: Arial, sans-serif;
             display: flex;
@@ -16,33 +16,39 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            padding: 20px; /* Add padding for smaller screens */
+            box-sizing: border-box;
         }
         h2 {
-            color: #FFD700; /* Gold color for heading */
+            color: #FFD700;
             text-align: center;
             margin-top: 0;
         }
         .scoreboard {
+            margin:auto;
             font-size: 1.2em;
             margin-bottom: 20px;
-            margin-left: 150px;
             color: #FFD700;
             display: flex;
-            justify-content: space-between;
-            width: 300px;
-        }
+            justify-content: center; /* Center-aligns the items */
+            gap: 20px; /* Adds space between the items */
+            width: 100%;
+            max-width: 300px;
+        }        
         .content {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 40px 20px;
             max-width: 600px;
-            width: 80%;
+            width: 100%;
             text-align: center;
+            box-sizing: border-box;
         }
         .game-content {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
         .game-item {
@@ -87,6 +93,50 @@
         .back-icon i {
             color: #007BFF;
             font-size: 24px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                height: auto; /* Allow content to scroll */
+                padding: 10px;
+            }
+            .content {
+                padding: 20px 10px;
+                width: 90%;
+            }
+            .scoreboard {
+                font-size: 1em;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .game-item img {
+                width: 80px;
+                height: 80px;
+            }
+            .game-item button {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+            .back-icon {
+                width: 50px;
+                height: 50px;
+                top: 15px;
+                left: 15px;
+            }
+            .back-icon i {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-content {
+                flex-direction: column;
+            }
+            .scoreboard {
+                width: 100%;
+            }
         }
     </style>
 </head>

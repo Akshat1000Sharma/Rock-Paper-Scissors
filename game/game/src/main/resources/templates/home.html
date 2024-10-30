@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text color for contrast */
+            font-family: 'Arial', sans-serif; /* Font style */
+            text-align: center; /* Center text */
+            padding: 50px; /* Padding around the content */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Larger font size for the heading */
+            margin-bottom: 30px; /* Space below the heading */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        button {
+            background-color: #FFD700; /* Yellow shade for buttons */
+            color: black; /* Black text color for buttons */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 15px 30px; /* Padding inside buttons */
+            font-size: 1.2em; /* Button text size */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin: 10px; /* Space between buttons */
+            transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+        }
+
+        button:hover {
+            background-color: #FFC107; /* Slightly darker yellow on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        button:active {
+            transform: scale(0.95); /* Slightly shrink button on click */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Rock Paper Scissors</h1>
+    <a href="/enterUsername"><button>Play Game</button></a>
+    <a href="/highscore"><button>Check High Score</button></a>
+    <a href="/rules"><button>Read Rules</button></a>
+</body>
+</html>

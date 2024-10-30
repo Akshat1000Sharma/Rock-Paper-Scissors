@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Rules</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #007BFF; /* Blue background */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h2 {
+            color: #FFD700; /* Gold color for the heading */
+            text-align: center;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+        .back-icon {
+            background: #FFFFFF; /* Circle background color */
+            border: none;
+            border-radius: 50%; /* Make it circular */
+            width: 60px; /* Circle size */
+            height: 60px; /* Circle size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .back-icon i {
+            color: #007BFF; /* Arrow color */
+            font-size: 24px; /* Icon size */
+        }
+        .back-icon {
+            text-decoration: none; /* Remove underline */
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="/" class="back-icon">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="content">
+        <h2>Rules of the Game</h2>
+        <p>This is a simple game of rock, paper, scissors.</p>
+        <p>The rules of rock, paper, scissors are:</p>
+        <p>
+            Hand signals:<br>
+            Players use three hand signals to represent rock, paper, and scissors:<br>
+            - Rock: A closed fist<br>
+            - Paper: A flat hand with fingers and thumb extended, and the palm facing down<br>
+            - Scissors: A fist with the index and middle fingers fully extended toward the opponent<br>
+        </p>
+        <p>
+            Winning:<br>
+            Rock beats scissors, paper beats rock, and scissors beats paper. If both players show the same hand signal, it's a tie.<br>
+        </p>
+        <p>
+            Playing:<br>
+            Players stand opposite each other and count "rock, paper, scissors" together. On the word "scissors", both players put out their hand signal.<br>
+        </p>
+        <p>
+            Zero-sum game:<br>
+            Rock, paper, scissors is a zero-sum game, meaning one player wins and the other loses.<br>
+            Some say that a good strategy is to not choose the same thing twice in a row, especially if you've been beaten.
+        </p>
+    </div>
+</body>
+</html>
